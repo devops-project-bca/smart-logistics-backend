@@ -1,104 +1,62 @@
-# Smart Logistics System – Frontend
+Smart Logistics System – Backend
 
-This is the React-based frontend for the Smart Logistics System, designed to manage logistics and shipment operations efficiently.  
-The application follows DevOps best practices including CI/CD, code quality analysis, containerization, and cloud deployment.
+This is the Spring Boot backend for the Smart Logistics System.
+It provides REST APIs to manage logistics and shipment data and serves as the core service for the frontend application.
 
----
+🚀 Live Backend API (Render)
+👉 https://smart-logistics-backend.onrender.com/api/shipments
 
-## 🚀 Live Deployment
+⚠️ Important Usage Note
+This backend service is hosted on Render Free Plan.
 
-### Frontend (Vercel)
-https://smart-logistics-frontend-mocha.vercel.app
+If inactive, the service may take 30–60 seconds to start.
+Please open the API URL once and wait for the response before accessing the frontend.
 
-### Frontend (Render – Free Tier)
-https://smart-logistics-frontend-2.onrender.com
-
-⚠️ Note:  
-Render free instances may spin down due to inactivity.  
-The first request may take 30–60 seconds to respond.
-
----
-
-## 📊 Project Presentation (Gamma AI)
-
-The complete project presentation was created using Gamma AI and covers:
-
-- Project overview  
-- System architecture  
-- Frontend & backend integration  
-- CI/CD pipeline using GitHub Actions  
-- SonarCloud code quality analysis  
-- Docker containerization  
-- Deployment using Vercel & Render  
-- Challenges faced and future scope  
-
-PPT Link:  
+📊 Project Presentation
+👉 Project PPT (Gamma AI):
 https://gamma.app/docs/Smart-Logistics-System-hq5yx3ca9plb8bn
 
----
+🛠️ Tech Stack
+Java  
+Spring Boot  
+REST APIs  
+Maven  
+Docker  
+GitHub Actions (CI/CD)  
+SonarCloud  
+Render (Backend Deployment)
 
-## 🛠️ Tech Stack
+▶️ Run Locally
+Bash
 
-- Frontend: React, JavaScript, HTML, CSS  
-- API Communication: Axios  
-- Backend: Spring Boot (REST APIs)  
-- CI/CD: GitHub Actions  
-- Code Quality: SonarCloud  
-- Containerization: Docker  
-- Deployment: Vercel, Render  
+git clone https://github.com/devops-project-bca/smart-logistics-backend.git  
+cd smart-logistics-backend  
+mvn clean install  
+mvn spring-boot:run  
 
----
+Backend runs at:
 
-## ⚙️ Features
+http://localhost:8080
 
-- Shipment data listing and management  
-- REST API-based frontend-backend communication  
-- Automated CI pipeline on GitHub  
-- Static code analysis using SonarCloud  
-- Dockerized backend service  
-- Cloud deployment with live URLs  
+🔍 SonarCloud
+SonarCloud analysis configured  
+Static code analysis enabled  
+Quality Gate monitored via GitHub Actions
 
----
+🐳 Docker Support
+The backend application is containerized using Docker.
 
-## ▶️ Run Frontend Locally
+Build Docker image:
 
-git clone https://github.com/devops-project-bca/smart-logistics-frontend.git  
-cd smart-logistics-frontend  
-npm install  
-npm start  
+docker build -t smart-logistics-backend .
 
-Frontend runs at:  
-http://localhost:3000
+Run Docker container:
 
----
+docker run -d -p 8080:8080 --name smart-backend smart-logistics-backend
 
-## 🔍 SonarCloud
+🔗 Frontend
+👉 Frontend Repository:
+https://github.com/devops-project-bca/smart-logistics-frontend
 
-- SonarCloud analysis integrated via GitHub Actions  
-- Code smells and maintainability issues identified  
-- Quality Gate configured and monitored  
-
----
-
-## ⚠️ Challenges Faced
-
-- Fixing SonarCloud quality gate failures  
-- Resolving React build warnings in CI  
-- Docker build and container execution issues  
-- Deployment delays due to free-tier limitations  
-
----
-
-## 🔮 Future Enhancements
-
-- Database integration  
-- Authentication and authorization  
-- Advanced shipment tracking  
-- Cloud-native backend deployment  
-
----
-
-## 👨‍💻 Project Type
-
-Academic / DevOps Demonstration Project  
-Built for college review, CI/CD practice, and deployment learning
+👉 Live Frontend URL (Vercel):
+https://smart-logistics-frontend-mocha.vercel.app
